@@ -7,7 +7,7 @@ export const THUMB_UP_COMMENT = 'THUMB_UP_COMMENT';
 export const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
 // ADD COMMENT
-const addComment = text => {
+export const addComment = text => {
 	return {
 		type: ADD_COMMENT,
 		text,
@@ -17,7 +17,7 @@ const addComment = text => {
 //const boundAddComment = text => dispatch(addComment(text));
 
 // EDIT COMMENT
-const editComment = (text, id) => {
+export const editComment = (text, id) => {
 	return {
 		type: EDIT_COMMENT,
 		text,
@@ -27,7 +27,7 @@ const editComment = (text, id) => {
 //const boundEditComment = (text, id) => dispatch(editComment(text, id));
 
 // REMOVE COMMENT
-const removeComment = id => {
+export const removeComment = id => {
 	return {
 		type: REMOVE_COMMENT,
 		id
@@ -36,7 +36,7 @@ const removeComment = id => {
 //const boundRemoveComment = id => dispatch(removeComment(id));
 
 // THUMB UP COMMENT
-//const thumbUpComment = (id, likes) => {
+export const thumbUpComment = (id, likes) => {
     return {
         type: THUMB_UP_COMMENT,
         id,
@@ -46,7 +46,7 @@ const removeComment = id => {
 //const boundThumbUpComment = (id, likes) => dispatch(thumbUpComment(id, likes));
 
 // THUMB DOWN COMMENT
-//const thumbDownComment = (id, dislikes) => {
+export const thumbDownComment = (id, dislikes) => {
     return {
         type: THUMB_DOWN_COMMENT,
         id,
